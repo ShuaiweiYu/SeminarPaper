@@ -19,26 +19,36 @@
 		The abstract should briefly summarize the contents of the paper in
 		150--250 words.
 
-		\keywords{First keyword  \and Second keyword \and Another keyword.}
+		\keywords{predictive process monitoring  \and literature review \and algorithm.}
 	\end{abstract}
 	
 	%the first part: Introduction into the topic
 	\section{Introduction}
+	Predictive Process Monitoring (PPM) or Predictive Business Process Monitoring (PBPM) is known as a specific brach of process mining. Unlike process mining XXXXX\cite{}, the predictive monitoring makes prediction about the development of an uncompleted business instance at runtime with given input data. 
+	%PPM的好处
+	%PPM好处举例子
 	
+	%PPM需要的数据 event log 等等
+	
+	%写这篇文章的动机
+	
+	
+	
+	Section 2 recorded the systematic literature review protocol, section 3 reveals the results of systematic literature review, section 4 searches on the trend of predictive process monitoring, and section 5 makes a conclusion about the article. 
 	
 	%the second part: Systematic Literature Review Protocol
 	\section{Systematic Literature Review Protocol}
 		%overview of the literature review.
-		The research questions are formulated in the systematic literature review protocol, the search protocol is defined, and the selection criteria are developed. The selection criteria are based on the selection criterion of \cite{ref1} and are modified following the guideline provided in Kitchenham's article \cite{ref2}. The work consisted of several stages. In the first stage, The review protocol was designed. Specifically, the research questions to be investigated were formulated, and I chose the electronic database that will be used to run the search. The selection criteria, as well as inclusion criteria, were also defined. In the next stage, the horizontal search was run. The documents acquired were then filtered according to selection criteria; in the end, the final list of documents will be generated.
+		The research questions are formulated in the systematic literature review protocol, the search protocol is defined, and the selection criteria are developed. The selection criteria are based on the selection criterion of \cite{original} and are modified following the guideline provided in Kitchenham's article \cite{guidline}. The work consisted of several stages. In the first stage, The review protocol was designed. Specifically, the research questions to be investigated were formulated, and I chose the electronic database that will be used to run the search. The selection criteria, as well as inclusion criteria, were also defined. In the next stage, the horizontal search was run. The documents acquired were then filtered according to selection criteria; in the end, the final list of documents will be generated.
 		
 		%research questions development.
 		The main research question (\textbf{RQ}):"\textit{What is the development and trend of the predictive process monitoring techniques over the research period?}" can be decomposed in four sub-question as follows. The first two sub-questions are so developed in order to research the current trends and algorithmic distribution of the predictive process monitoring. \textbf{RQ1}: "\textit{What is the distribution of the literature about predictive process monitoring over the search period?}" and \textbf{RQ2}: "\textit{What aspects can be predicted by the predictive process monitoring?}". The next sub-question focuses on the aspects of outcome that can be predicted, \textbf{RQ3}:"\textit{What is the distribution of the algorithms used in predictive process monitoring over the search period?}". In the last question, I want to research the reason that leads to the current trend of predictive process monitoring, i.e., \textbf{RQ4}: "What leads to the trend of predictive process monitoring?"
 		
 		%motivations of the research questions.
-		In the first research question, I want to visualize the distribution of the article published in order to analyze the current trend of predictive process monitoring. With this visualization, people are able to take a deeper look into the development of interest in the industry of predictive process monitoring. The second research question examines the distribution of algorithms used for predictive process monitoring. The motivation for this is that I want to reveal which algorithms are more popular and widely used. With the first two research questions, current research trend of predictive process monitoring can be derived. I can also analyze the possible research gaps where further academic contributions could be made. In \cite{ref1}, several aspects were already listed. However, the third research questions want to research whether there are new predictive aspects developed or how the new predictive process monitoring model predicts these aspects differently. The last research question tries to look into the reason that led to the current development of predictive process monitoring so that I might predict what the research direction of this field might be.
+		In the first research question, I want to visualize the distribution of the article published in order to analyze the current trend of predictive process monitoring. With this visualization, people are able to take a deeper look into the development of interest in the industry of predictive process monitoring. The second research question examines the distribution of algorithms used for predictive process monitoring. The motivation for this is that I want to reveal which algorithms are more popular and widely used. With the first two research questions, current research trend of predictive process monitoring can be derived. I can also analyze the possible research gaps where further academic contributions could be made. In \cite{original}, several aspects were already listed. However, the third research questions want to research whether there are new predictive aspects developed or how the new predictive process monitoring model predicts these aspects differently. The last research question tries to look into the reason that led to the current development of predictive process monitoring so that I might predict what the research direction of this field might be.
 		
 		%development of search string
-		To develop the search string, I followed the guidelines and suggestions given by \cite{ref2} and based on the work of \cite{ref1}, The first search string I use is: ("predictive" OR "prediction") + ("business process" OR "process mining"). Furthermore, in order to explore as many results as possible, I also decided another search string: ("predictive" OR "prediction") + "process monitoring". 
+		To develop the search string, I followed the guidelines and suggestions given by \cite{guidline} and based on the work of \cite{original}, The first search string I use is: ("predictive" OR "prediction") + ("business process" OR "process mining"). Furthermore, in order to explore as many results as possible, I also decided another search string: ("predictive" OR "prediction") + "process monitoring". 
 		
 		%electronic database
 		After defining the search string, I could choose electronic databases for searching. I decided to use Google Scholar as electronic databases to be used, for its completeness and simple operability. The search period was between year 2018 and 2022.
@@ -54,7 +64,7 @@
 
 		\begin{figure}
 		\includegraphics[width=\textwidth]{Filtering.png}
-		\caption{Overview of Systematic Literature Review Protocol} \label{fig1}
+		\caption{Overview of Systematic Literature Review Protocol} 
 		\end{figure}
 		
 		%extraction of information of the data 
@@ -74,7 +84,7 @@
 		\end{figure}
 		
 		%Prediction level proportion
-		To address \textbf{RQ2}, I need to look closely at the prediction level proposed in each paper. The work of \cite{ref1} categorized three prediction levels, i.e., Numeric Predictions,   Categorical Predictions, and Next Activities Predictions. Here I followed the same principle and categorized my final article. I calculated thae proportion of each prediction level and plotted the following graph.
+		To address \textbf{RQ2}, I need to look closely at the prediction level proposed in each paper. The work of \cite{original} categorized three prediction levels, i.e., Numeric Predictions,   Categorical Predictions, and Next Activities Predictions. Here I followed the same principle and categorized my final article. I calculated thae proportion of each prediction level and plotted the following graph.
 		
 		
 		\begin{figure}
@@ -83,11 +93,21 @@
 		\caption{The proportion of the prediction types}
 		\end{figure}
 		
-		People can observe that 55\% of techniques make a next-activity prediction. On the contrary, only 16\% of techniques make numeric predictions; I will look into this phenomenon in the following sub-sections and find reasons for this. I will also summarize the benefits each prediction type brings to business logic as well as briefly talk about the algorithms and new trends that emerged in current studies. 
+		People can observe that 55\% of techniques make a next-activity prediction. On the contrary, only 16\% of techniques make numeric predictions; I will look into this phenomenon in the following sub-sections. I will also summarize the benefits each prediction type brings to business logic as well as briefly talk about the algorithms and new trends that emerged in current studies.
+		
+		\subsection{Next Activities Predictions}
+		
+		\subsection{Categorical Predictions}
 		
 		\subsection{Numeric Predictions}
-		\subsection{Categorical Predictions}
-		\subsection{Next Activities Predictions}
+		%benefits os time prediction
+		The work focuses on numeric predictions is another crucial area. However, the research papers published during the search period focus majorly on time prediction. Thus in this section, we will be concentrating only on the remaining time prediction. As demonstrated in \cite{art-13}, The prediction of the remaining time can be beneficial in areas where the scheduling and choice determination are involved. \cite{art-15} also addresses the significance of the remaining time prediction by mentioning its usage to avoid undesirable situations during the running business process. \cite{art-29} suggest that the remaining time should be communicated between business partners to provide the customer with better service. 
+		
+		The works in this area all rely on specific models. It is clear that different methods are used to make the prediction, but among them, neural networks are the most commonly used method. \cite{art-29} points out that the prediction of remaining execution time belongs to regression problems and \cite{art-17} illustrated that the Long Short-Term Memory networks (LSTMs) commonly perform better than other models. Due to these facts, it is not hard to imagine why neural networks are the most commonly used ones.
+		
+		%TODO:接下来分析不同文章中提到的方法以及有哪些创新
+		
+		
 		
 		
 		
@@ -109,7 +129,7 @@
 		%接下来研究一下为什么会有这种趋势，做一个新的图，研究可能的gap
 		
 		
-		
+		%可以介绍一下神经网络，解释一下什么是伸进网络，讲讲他的好处（精确），从他的不可解释性引申到XAI
 		
 		
 		\section{Conclusion}
@@ -122,11 +142,23 @@
 	\begin{thebibliography}{99}
 	
 	%TODO: 引用的格式？？？
-	\bibitem{ref1}
+	\bibitem{original}
 	Di Francescomarino C, Ghidini C, Maggi F M, et al. Predictive process monitoring methods: Which one suits me best?[C]//International conference on business process management. Springer, Cham, 2018: 462-479.
 	
-	\bibitem{ref2}
+	\bibitem{guidline}
 	Kitchenham B. Procedures for performing systematic reviews[J]. Keele, UK, Keele University, 2004, 33(2004): 1-26.
+	
+	\bibitem{art-13}
+	Ogunbiyi N, Basukoski A, Chaussalet T. Incorporating spatial context into remaining-time predictive process monitoring[C]//Proceedings of the 36th Annual ACM Symposium on Applied Computing. 2021: 535-542.
+	
+	\bibitem{art-15}
+	Wahid N A, Adi T N, Bae H, et al. Predictive business process monitoring–remaining time prediction using deep neural network with entity embedding[J]. Procedia Computer Science, 2019, 161: 1080-1088.
+	
+	\bibitem{art-17}
+	Galanti R, Coma-Puig B, de Leoni M, et al. Explainable predictive process monitoring[C]//2020 2nd International Conference on Process Mining (ICPM). IEEE, 2020: 1-8.
+	
+	\bibitem{art-29}
+	Jian C, Xiaofu H, Qing Q. Selecting Publishing Points for the Optimal Sharing of Predictive Monitoring Information of a Service Process[C]//2019 IEEE International Conference on Web Services (ICWS). IEEE, 2019: 368-372.
 		
 	\end{thebibliography}
 
