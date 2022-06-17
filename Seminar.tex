@@ -6,6 +6,8 @@
 
 \usepackage{hyperref}[colorlinks,linkcolor=blue]
 
+\usepackage[utf8]{inputenc}
+
 \begin{document}
 	\title{Seminar- scientific methods in information systems}
 	\subtitle{Predictive Process Monitoring Methods:\\ Which One Suits Me Best?}
@@ -84,7 +86,7 @@
 		\end{figure}
 		
 		%Prediction level proportion
-		To address \textbf{RQ2}, I need to look closely at the prediction level proposed in each paper. The work of \cite{original} categorized three prediction levels, i.e., Numeric Predictions,   Categorical Predictions, and Next Activities Predictions. Here I followed the same principle and categorized my final article. I calculated thae proportion of each prediction level and plotted the following graph.
+		To address \textbf{RQ2}, I need to look closely at the prediction level proposed in each paper. The work of \cite{original} categorized three prediction levels, i.e., Numeric Predictions,   Categorical Predictions, and Next Activities Predictions. Here I followed the same principle and categorized my final article. I calculated the proportion of each prediction level and plotted the following graph.
 		
 		
 		\begin{figure}
@@ -93,7 +95,7 @@
 		\caption{The proportion of the prediction types}
 		\end{figure}
 		
-		People can observe that 55\% of techniques make a next-activity prediction. On the contrary, only 16\% of techniques make numeric predictions; I will look into this phenomenon in the following sub-sections. I will also summarize the benefits each prediction type brings to business logic as well as briefly talk about the algorithms and new trends that emerged in current studies.
+		People can observe that 58\% of techniques make a next-activity prediction. On the contrary, only 16\% of techniques make numeric predictions; I will look into this phenomenon in the following sub-sections. I will also summarize the benefits each prediction type brings to business logic as well as briefly talk about the algorithms and new trends that emerged in current studies.
 		
 		\subsection{Next Activities Predictions}
 		
@@ -105,14 +107,10 @@
 		
 		The works in this area all rely on specific models. It is clear that different methods are used to make the prediction, but among them, neural networks are the most commonly used method. \cite{art-29} points out that the prediction of remaining execution time belongs to regression problems and \cite{art-17} illustrated that the Long Short-Term Memory networks (LSTMs) commonly perform better than other models. Due to these facts, it is not hard to imagine why neural networks are the most commonly used ones.
 		
-		%TODO:接下来分析不同文章中提到的方法以及有哪些创新
-		
-		
-		
-		
-		
-		
-		%TODO: rewrite thentitle
+		In\cite{art-15}\cite{art-21}\cite{art-29}, neural networks are leveraged to make a precise prediction. In \cite{art-15}, the authors employed Deep Neural Network (DNN) and Entity Embedding technique to raise the predictive accuracy. Entity Embedding is important in this context to raise the speed of the neural network; this encoding method clusters the intrinsically similar values that will be denoted as vectors and placed near each other to reduce memory usage.  \cite{art-21} uses LSTM neural network to implement the prediction model. \cite{art-21} suggests that LSTM overcomes the drawback of Recurrent Neural Networks (RNN), which is good at short-term sequential prediction but fails to manage long-term predictions. LSTM networks solve the problem by maintaining some aspects constant of the information flow within the neural cells. \cite{art-29} also leverages the LSTM model to perform the prediction. However, the article also proposes the goal of optimization of selecting publishing points. \cite{art-17} attempts to explain the prediction models with Explainable AI based on the game theory of Shapley Values. The Shapley value of a variable refers to the contribution of this variable to the prediction. In \cite{art-13}, the authors propose to record the spatial event log at the event log that is used as input data to increase accuracy.       
+
+				
+		%TODO: rewrite the title
 		\section{Search on the algorithmical trend}
 		
 		To address \textbf{RQ3}, I have to take a deeper look into the algorithms used in each paper. 
@@ -123,6 +121,13 @@
 		\includegraphics[scale=0.4]{Distribution_algorithms.png}
 		\centering
 		\caption{The Distribution of algorithms between the years 2018 and 2022}
+		\end{figure}
+		
+		
+		\begin{figure}
+		\includegraphics[scale=0.6]{Algorithms_usage.png}
+		\centering
+		\caption{Algorithms used in each prediction type}
 		\end{figure}
 		
 		%算法的运用有什么新的趋势吗？XAI eg 为什么会有这种新的趋势
@@ -148,6 +153,21 @@
 	\bibitem{guidline}
 	Kitchenham B. Procedures for performing systematic reviews[J]. Keele, UK, Keele University, 2004, 33(2004): 1-26.
 	
+	\bibitem{art-4}
+	Prasidis I, Theodoropoulos N P, Bousdekis A, et al. Handling Uncertainty in Predictive Business Process Monitoring with Bayesian Networks[C]//2021  12th International Conference on Information, Intelligence, Systems \& Applications (IISA). IEEE, 2021: 1-8.
+	
+	\bibitem{art-8}
+	Lu K, Fang X, Fang X. Business Process Outcome Prediction Based on Deep Latent Factor Model[J]. Electronics, 2022, 11(9): 1509.
+	
+	\bibitem{art-9}
+	Wang J, Yu D, Liu C, et al. Outcome-oriented predictive process monitoring with attention-based bidirectional LSTM neural networks[C]//2019 IEEE International Conference on Web Services (ICWS). IEEE, 2019: 360-367.
+	
+	\bibitem{art-11}
+	Rizzi W, Di Francescomarino C, Maggi F M. Explainability in predictive process monitoring: when understanding helps improving[C]//International Conference on Business Process Management. Springer, Cham, 2020: 141-158.
+	
+	\bibitem{art-12}
+	Pasquadibisceglie V, Appice A, Castellano G, et al. ORANGE: outcome-oriented predictive process monitoring based on image encoding and CNNs[J]. IEEE Access, 2020, 8: 184073-184086.
+	
 	\bibitem{art-13}
 	Ogunbiyi N, Basukoski A, Chaussalet T. Incorporating spatial context into remaining-time predictive process monitoring[C]//Proceedings of the 36th Annual ACM Symposium on Applied Computing. 2021: 535-542.
 	
@@ -156,6 +176,18 @@
 	
 	\bibitem{art-17}
 	Galanti R, Coma-Puig B, de Leoni M, et al. Explainable predictive process monitoring[C]//2020 2nd International Conference on Process Mining (ICPM). IEEE, 2020: 1-8.
+	
+	\bibitem{art-20}
+	Ouyang C, Sindhgatta R, Moreira C. Explainable AI Enabled Inspection of Business Process Prediction Models[J]. arXiv preprint arXiv:2107.09767, 2021.
+	
+	\bibitem{art-21}
+	Camargo M, Dumas M, González-Rojas O. Learning accurate LSTM models of business processes[C]//International Conference on Business Process Management. Springer, Cham, 2019: 286-302.
+	
+	\bibitem{art-26}
+	Käppel M, Jablonski S, Schönig S. Cost-sensitive predictive business process monitoring[C]//European Conference on Advances in Databases and Information Systems. Springer, Cham, 2021: 14-26.
+	
+	\bibitem{art-27}
+	Weinzierl S, Dunzer S, Tenschert J, et al. Predictive business process deviation monitoring[C]//Proceedings of the 29th European Conference on Information Systems (ECIS). 2021.
 	
 	\bibitem{art-29}
 	Jian C, Xiaofu H, Qing Q. Selecting Publishing Points for the Optimal Sharing of Predictive Monitoring Information of a Service Process[C]//2019 IEEE International Conference on Web Services (ICWS). IEEE, 2019: 368-372.
