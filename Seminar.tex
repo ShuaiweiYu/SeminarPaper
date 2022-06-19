@@ -4,7 +4,7 @@
 
 \usepackage{graphicx}
 
-\usepackage{hyperref}[colorlinks,linkcolor=blue]
+\usepackage[colorlinks,bookmarksopen,bookmarksnumbered,citecolor=blue, linkcolor=blue, urlcolor=blue]{hyperref}
 
 \usepackage[utf8]{inputenc}
 
@@ -18,16 +18,14 @@
 	
 	%here begins the abstract
 	\begin{abstract}
-		The abstract should briefly summarize the contents of the paper in
-		150--250 words.
+		Predictive process monitoring (PPM) is a powerful tool in business logic, and it is gaining more and more attention from industry and academia. Due to the great interest in this topic, a significant number of works are continuously published. Therefore there is an indispensable need to perform a literature review on predictive process monitoring. The main objective of this paper is to research the current situation and algorithmic trend of predictive process monitoring so that potential research gaps can be identified. The objective is achieved through a systematic literature review aimed at the search period of 2018 - 2022 on the topic of predictive process monitoring. A Multi-step filtering was performed on the 263 retrieved articles, and a final list of 32 papers was selected. The data subtracted from the papers are then used to analyze and summarize. The final result reveals the current trend and identifies the research gaps in PPM.
 
 		\keywords{predictive process monitoring  \and literature review \and algorithm.}
 	\end{abstract}
 	
 	%the first part: Introduction into the topic
 	\section{Introduction}
-	Predictive Process Monitoring (PPM) or Predictive Business Process Monitoring (PBPM) is known as a specific brach of process mining. Unlike process mining XXXXX\cite{}, the predictive monitoring makes prediction about the development of uncompleted business instances at runtime with given input data. 
-	
+	Predictive Process Monitoring (PPM) or Predictive Business Process Monitoring (PBPM) is known as a specific brach of process mining. Unlike process mining XXXXX\cite{}, the predictive monitoring makes prediction about the development of uncompleted business instances at runtime with given input data\cite{original}.
 	%TODO: PPM的好处
 	%TODO: PPM好处举例子
 	
@@ -71,8 +69,8 @@
 		
 		%extraction of information of the data 
 		From the final 32 papers, I extracted the meta-Information. Information about the publication date was extracted to answer \textbf{RQ1}. Every article usually comes up with an algorithm that predicts some or several aspects of the business process. Thus, I categorize each paper with its prediction level and algorithms so that the \textbf{RQ2} and \textbf{RQ3} can be answered. By analyzing the data and looking into each paper, \textbf{RQ4} in the end can be addressed.\footnote{The selected documents were enter into an excel sheet and is available at \url{https://tumde-my.sharepoint.com/:x:/g/personal/shuaiwei_yu_tum_de/Ef8ufzITCHpNi32om-3FQUQBZvOeGkWU9LLN_ZlcvawoRQ?e=cc8cnW} }
+		
 	
-	\newpage
 	\section{Systematic Literature Review Results}
 		
 		%publication distribution
@@ -100,9 +98,35 @@
 		\subsection{Next Activities Predictions}
 		
 		\subsection{Categorical Predictions}
+		The second prediction type is the categorical prediction. The predictions about the categorical outcome and risk monitoring are made. \cite{art-9} claims that the outcome prediction represents a run-time process most intuitively. The outcome prediction can be summarized as problems of classification given input in the early stage; The example for this prediction type can be very intuitive, e.g., in the service branch, whether the customer is satisfied with the solution or the service provided; In the business area, this technique can be used to predict whether a purchase order will be successfully closed or will be withdrawn, or the ordered products will be delivered on time\cite{art-12}.
+		
+		Several families of algorithms are used in the prediction family. A new technique that emerged in recent years also draws my attention -- Explainable AI (XAI). Several papers about the XAI are used in the categorical predictions to find the explanations for the classification predictions made by the models and try to enhance people's trust in the PPM techniques. 
+		
+		\cite{art-4} and \cite{art-26} leverage the traditional machine learning methods to develop the prediction model. However, the specific algorithm being used is different. The authors of \cite{art-4} argue that Bayesian Networks (BN) are under-explored and come up with two approaches based on Bayesian Networks to handle the uncertainty in PPM. The first approach utilizes parameter learning in BN, which is suitable when facing the lack of the event logs or the business process is complex; In the second approach, parameters and the BN's structure are directly learned by the event log. \cite{art-26} applied cost-sensitive learning (CSL) to address the problem of predicting non-frequent trace variants. The concept of CSL is to assign misclassification cost to each class, and the ML model tries to minimize the total misclassification cost. CSL can capture rare activities of particular importance to increase prediction accuracy. \cite{art-8}  
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		  
 		
 		\subsection{Numeric Predictions}
-		%benefits os time prediction
 		The work focuses on numeric predictions is another crucial area. However, the research papers published during the search period focus majorly on time prediction. Thus in this section, we will be concentrating only on the remaining time prediction. As demonstrated in \cite{art-13}, The prediction of the remaining time can be beneficial in areas where the scheduling and choice determination are involved. \cite{art-15} also addresses the significance of the remaining time prediction by mentioning its usage to avoid undesirable situations during the running business process. \cite{art-29} suggest that the remaining time should be communicated between business partners to provide the customer with better service. 
 		
 		The works in this area all rely on specific models. It is clear that different methods are used to make the prediction, but among them, neural networks are the most commonly used method. \cite{art-29} points out that the prediction of remaining execution time belongs to regression problems and \cite{art-17} illustrated that the Long Short-Term Memory networks (LSTMs) commonly perform better than other models. Due to these facts, it is not hard to imagine why neural networks are the most commonly used ones.
@@ -111,11 +135,10 @@
 
 				
 		%TODO: rewrite the title
-		\section{Search on the algorithmical trend}
 		
-		To address \textbf{RQ3}, I have to take a deeper look into the algorithms used in each paper. 
+		\section{Search on the algorithmic trend}
 		
-		%首先介绍一下我们发现了哪些算法，哪些算法是主流，为什么；哪些算法不是主流，为什么。
+		To address \textbf{RQ3}, we have to look deeper into the algorithms used in each paper. Thus I summarized the family of algorithms used throughout the research period. We can derive from this graph that the Neural Networks are dominantly used. However, the traditional machine learning methods are not yet outdated; they still find usage in recent works. In recent years, the adoption of Explainable AI in predictive process monitoring is also observed, and it could possibly bring new insights into the Process mining area.       
 		
 		\begin{figure}
 		\includegraphics[scale=0.4]{Distribution_algorithms.png}
@@ -123,6 +146,7 @@
 		\caption{The Distribution of algorithms between the years 2018 and 2022}
 		\end{figure}
 		
+		\textbf{RQ3} now leads us to \textbf{RQ4}. It is beneficial for us to search the algorithmic trend of PPM and the reason behind this, by taking a look of this trend, we are also able to identify the new possible research gaps in the current research field. I plotted the following graph by classifying the algorithms used in each prediction type. 
 		
 		\begin{figure}
 		\includegraphics[scale=0.6]{Algorithms_usage.png}
