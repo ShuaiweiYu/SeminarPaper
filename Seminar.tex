@@ -32,29 +32,31 @@
 		
 		%TODO: PPM好处举例子
 		Various of work suggest the use case and the advantage of implementing predictive process monitoring. 
+		%TODO: Consider to merge these two paragraph together.
 		
 	
 	
 		%TODO: PPM需要的数据 event log 等等
+		Since PPM technique is a branch of process mining technique, it also requires event logs as input\cite{art-15}. 
 	
-		%TODO: 写这篇文章的动机
-	
+		%motivation
+		As demonstrated in \cite{original}, a significant amount of literature about predictive process monitoring techniques is becoming available in recent years. A large number of articles on this topic led to the necessity to research the current situation of the PPM technique, what efforts are made, and what is the current research gaps in this field.	In this research paper, I want to answer the main research question \textbf{RQ}: "\textit{What is the development and trend of the predictive process monitoring techniques over the research period?}". This question is achieved by a systematic literature review under the guidance given by \cite{guideline}. I selected 32 papers from 263 papers, which were acquired through searching using google scholar with proper keywords. These 32 papers were then categorized, analyzed, and summarized. As a result, I identified several popular algorithms that are being used most frequently, and I also noticed some new uprising algorithmic trends nowadays. Furthermore, I also detected some potential research gaps in the current predictive process monitoring field. 
 	
 		The remainder of this article is developed as follows. Section 2 recorded the systematic literature review protocol, section 3 reveals the results of systematic literature review, section 4 searches on the trend of predictive process monitoring, and section 5 makes a conclusion about the article. 
 	
 	%the second part: Systematic Literature Review Protocol
 	\section{Systematic Literature Review Protocol}
 		%overview of the literature review.
-		The research questions are formulated in the systematic literature review protocol, the search protocol is defined, and the selection criteria are developed. The selection criteria are based on the selection criterion of \cite{original} and are modified following the guideline provided in Kitchenham's article \cite{guidline}. The work consisted of several stages. In the first stage, The review protocol was designed. Specifically, the research questions to be investigated were formulated, and I chose the electronic database that will be used to run the search. The selection criteria, as well as inclusion criteria, were also defined. In the next stage, the horizontal search was run. The documents acquired were then filtered according to selection criteria; in the end, the final list of documents will be generated.
+		The research questions are formulated in the systematic literature review protocol, the search protocol is defined, and the selection criteria are developed. The selection criteria are based on the selection criterion of \cite{original} and are modified following the guideline provided in Kitchenham's article \cite{guideline}. The work consisted of several stages. In the first stage, The review protocol was designed. Specifically, the research questions to be investigated were formulated, and I chose the electronic database that will be used to run the search. The selection criteria, as well as inclusion criteria, were also defined. In the next stage, the horizontal search was run. The documents acquired were then filtered according to selection criteria; in the end, the final list of documents will be generated.
 		
 		%research questions development.
-		The main research question (\textbf{RQ}):"\textit{What is the development and trend of the predictive process monitoring techniques over the research period?}" can be decomposed in four sub-question as follows. The first two sub-questions are so developed in order to research the current trends and algorithmic distribution of the predictive process monitoring. \textbf{RQ1}: "\textit{What is the distribution of the literature about predictive process monitoring over the search period?}" and \textbf{RQ2}: "\textit{What aspects can be predicted by the predictive process monitoring?}". The next sub-question focuses on the aspects of outcome that can be predicted, \textbf{RQ3}:"\textit{What is the distribution of the algorithms used in predictive process monitoring over the search period?}". In the last question, I want to research the reason that leads to the current trend of predictive process monitoring, i.e., \textbf{RQ4}: "What leads to the trend of predictive process monitoring?"
+		The main research question (\textbf{RQ}): "\textit{What is the development and trend of the predictive process monitoring techniques over the research period?}" can be decomposed in four sub-question as follows. The first two sub-questions are so developed in order to research the current trends and algorithmic distribution of the predictive process monitoring. \textbf{RQ1}: "\textit{What is the distribution of the literature about predictive process monitoring over the search period?}" and \textbf{RQ2}: "\textit{What aspects can be predicted by the predictive process monitoring?}". The next sub-question focuses on the aspects of outcome that can be predicted, \textbf{RQ3}:"\textit{What is the distribution of the algorithms used in predictive process monitoring over the search period?}". In the last question, I want to research the reason that leads to the current trend of predictive process monitoring, i.e., \textbf{RQ4}: "What leads to the trend of predictive process monitoring?"
 		
 		%motivations of the research questions.
 		In the first research question, I want to visualize the distribution of the article published in order to analyze the current trend of predictive process monitoring. With this visualization, people are able to take a deeper look into the development of interest in the industry of predictive process monitoring. The second research question examines the distribution of algorithms used for predictive process monitoring. The motivation for this is that I want to reveal which algorithms are more popular and widely used. With the first two research questions, current research trend of predictive process monitoring can be derived. I can also analyze the possible research gaps where further academic contributions could be made. In \cite{original}, several aspects were already listed. However, the third research questions want to research whether there are new predictive aspects developed or how the new predictive process monitoring model predicts these aspects differently. The last research question tries to look into the reason that led to the current development of predictive process monitoring so that I might predict what the research direction of this field might be.
 		
 		%development of search string
-		To develop the search string, I followed the guidelines and suggestions given by \cite{guidline} and based on the work of \cite{original}, The first search string I use is: ("predictive" OR "prediction") + ("business process" OR "process mining"). Furthermore, in order to explore as many results as possible, I also decided another search string: ("predictive" OR "prediction") + "process monitoring". 
+		To develop the search string, I followed the guidelines and suggestions given by \cite{guideline} and based on the work of \cite{original}, The first search string I use is: ("predictive" OR "prediction") + ("business process" OR "process mining"). Furthermore, in order to explore as many results as possible, I also decided another search string: ("predictive" OR "prediction") + "process monitoring". 
 		
 		%electronic database
 		After defining the search string, I could choose electronic databases for searching. I decided to use Google Scholar as electronic databases to be used, for its completeness and simple operability. The search period was between year 2018 and 2022.
@@ -81,7 +83,7 @@
 		
 		%publication distribution
 		To answer \textbf{RQ1}, I analyzed the publication date from the extracted meta-data by plotting the publication number. More and more publications on predictive process monitoring can be observed. Such a trend would imply that the PPM is gaining more and more attention, and the topic is becoming hotter. There is only one publication from 2022, probably because the queries were performed in May, and some papers are not yet published. Several conferences about Information Systems are not yet held, e.g., \textit{International Conference on Process Mining (ICPM)} will take place in October 2022. 
-	
+		
 	
 		\begin{figure}
 		\includegraphics[scale=0.4]{Distribution_publications.png}
@@ -102,6 +104,7 @@
 		People can observe that 58\% of techniques make a next-activity prediction. On the contrary, only 16\% of techniques make numeric predictions; I will look into this phenomenon in the following sub-sections. I will also summarize the benefits each prediction type brings to business logic as well as briefly talk about the algorithms and new trends that emerged in current studies.
 		
 		\subsection{Next Activities Predictions}
+		The first prediction type I discovered is the next activities prediction.....
 		
 		\subsection{Categorical Predictions}
 		The second prediction type is the categorical prediction. The predictions about the categorical outcome and risk monitoring are made. \cite{art-9} claims that the outcome prediction represents a run-time process most intuitively. The outcome prediction can be summarized as problems of classification given input in the early stage; The example for this prediction type can be very intuitive, e.g., in the service branch, whether the customer is satisfied with the solution or the service provided; In the business area, this technique can be used to predict whether a purchase order will be successfully closed or will be withdrawn, or the ordered products will be delivered on time\cite{art-12}.
@@ -142,7 +145,7 @@
 				
 		%TODO: rewrite the title
 		
-		\section{Search on the algorithmic trend}
+		\section{Research On The Algorithmic Trend}
 		
 		To address \textbf{RQ3}, we have to look deeper into the algorithms used in each paper. Thus I summarized the family of algorithms used throughout the research period. We can derive from this graph that the Neural Networks are dominantly used. However, the traditional machine learning methods are not yet outdated; they still find usage in recent works. In recent years, the adoption of Explainable AI in predictive process monitoring is also observed, and it could possibly bring new insights into the Process mining area.       
 		
@@ -180,17 +183,38 @@
 	\bibitem{original}
 	Di Francescomarino C, Ghidini C, Maggi F M, et al. Predictive process monitoring methods: Which one suits me best?[C]//International conference on business process management. Springer, Cham, 2018: 462-479.
 	
-	\bibitem{guidline}
+	\bibitem{guideline}
 	Kitchenham B. Procedures for performing systematic reviews[J]. Keele, UK, Keele University, 2004, 33(2004): 1-26.
+	
+	\bibitem{art-1}
+	Böhmer K, Rinderle-Ma S. LoGo: combining local and global techniques for predictive business process monitoring[C]//International Conference on Advanced Information Systems Engineering. Springer, Cham, 2020: 283-298.
+	
+	\bibitem{art-2}
+	Böhmer K, Rinderle-Ma S. Probability based heuristic for predictive business process monitoring[C]//OTM Confederated International Conferences" On the Move to Meaningful Internet Systems". Springer, Cham, 2018: 78-96.
+	
+	\bibitem{art-3}
+	Weinzierl S, Zilker S, Stierle M, et al. From predictive to prescriptive process monitoring: Recommending the next best actions instead of calculating the next most likely events[C]//Wirtschaftsinformatik (Zentrale Tracks). 2020: 364-368.
 	
 	\bibitem{art-4}
 	Prasidis I, Theodoropoulos N P, Bousdekis A, et al. Handling Uncertainty in Predictive Business Process Monitoring with Bayesian Networks[C]//2021  12th International Conference on Information, Intelligence, Systems \& Applications (IISA). IEEE, 2021: 1-8.
+	
+	\bibitem{art-5}
+	Pasquadibisceglie V, Appice A, Castellano G, et al. A multi-view deep learning approach for predictive business process monitoring[J]. IEEE Transactions on Services Computing, 2021.
+	
+	\bibitem{art-6}
+	Pasquadibisceglie V, Appice A, Castellano G, et al. A multi-view deep learning approach for predictive business process monitoring[J]. IEEE Transactions on Services Computing, 2021.
+	
+	\bibitem{art-7}
+	Jalayer A, Kahani M, Beheshti A, et al. Attention mechanism in predictive business process monitoring[C]//2020 IEEE 24th International Enterprise Distributed Object Computing Conference (EDOC). IEEE, 2020: 181-186.
 	
 	\bibitem{art-8}
 	Lu K, Fang X, Fang X. Business Process Outcome Prediction Based on Deep Latent Factor Model[J]. Electronics, 2022, 11(9): 1509.
 	
 	\bibitem{art-9}
 	Wang J, Yu D, Liu C, et al. Outcome-oriented predictive process monitoring with attention-based bidirectional LSTM neural networks[C]//2019 IEEE International Conference on Web Services (ICWS). IEEE, 2019: 360-367.
+	
+	\bibitem{art-10}
+	Khan N, McClean S, Ali Z, et al. Predictive process monitoring using a Markov model technique[C]//2019 International Conference on Computing, Electronics \& Communications Engineering (iCCECE). IEEE, 2019: 193-196.
 	
 	\bibitem{art-11}
 	Rizzi W, Di Francescomarino C, Maggi F M. Explainability in predictive process monitoring: when understanding helps improving[C]//International Conference on Business Process Management. Springer, Cham, 2020: 141-158.
@@ -201,11 +225,23 @@
 	\bibitem{art-13}
 	Ogunbiyi N, Basukoski A, Chaussalet T. Incorporating spatial context into remaining-time predictive process monitoring[C]//Proceedings of the 36th Annual ACM Symposium on Applied Computing. 2021: 535-542.
 	
+	\bibitem{art-14}
+	Nguyen A, Chatterjee S, Weinzierl S, et al. Time matters: time-aware LSTMs for predictive business process monitoring[C]//International Conference on Process Mining. Springer, Cham, 2020: 112-123.
+	
 	\bibitem{art-15}
 	Wahid N A, Adi T N, Bae H, et al. Predictive business process monitoring–remaining time prediction using deep neural network with entity embedding[J]. Procedia Computer Science, 2019, 161: 1080-1088.
 	
+	\bibitem{art-16}
+	Mehdiyev N, Fettke P. Explainable artificial intelligence for process mining: A general overview and application of a novel local explanation approach for predictive process monitoring[J]. Interpretable Artificial Intelligence: A Perspective of Granular Computing, 2021: 1-28.
+	
 	\bibitem{art-17}
 	Galanti R, Coma-Puig B, de Leoni M, et al. Explainable predictive process monitoring[C]//2020 2nd International Conference on Process Mining (ICPM). IEEE, 2020: 1-8.
+	
+	\bibitem{art-18}
+	Rico P, Cuadrado F, Dueñas J C. Online Model Generation for Scalable Predictive Process Monitoring[C]//2021 International Young Engineers Forum (YEF-ECE). IEEE, 2021: 7-12.
+	
+	\bibitem{art-19}
+	Pauwels S, Calders T. Incremental predictive process monitoring: The next activity case[C]//International Conference on Business Process Management. Springer, Cham, 2021: 123-140.
 	
 	\bibitem{art-20}
 	Ouyang C, Sindhgatta R, Moreira C. Explainable AI Enabled Inspection of Business Process Prediction Models[J]. arXiv preprint arXiv:2107.09767, 2021.
@@ -213,14 +249,38 @@
 	\bibitem{art-21}
 	Camargo M, Dumas M, González-Rojas O. Learning accurate LSTM models of business processes[C]//International Conference on Business Process Management. Springer, Cham, 2019: 286-302.
 	
+	\bibitem{art-22}
+	Appice A, Di Mauro N, Malerba D. Leveraging shallow machine learning to predict business process behavior[C]//2019 IEEE International Conference on Services Computing (SCC). IEEE, 2019: 184-188.
+	
+	\bibitem{art-23}
+	Mauro N D, Appice A, Basile T. Activity prediction of business process instances with inception CNN models[C]//International conference of the italian association for artificial intelligence. Springer, Cham, 2019: 348-361.
+	
+	\bibitem{art-24}
+	Pasquadibisceglie V, Appice A, Castellano G, et al. Using convolutional neural networks for predictive process analytics[C]//2019 international conference on process mining (ICPM). IEEE, 2019: 129-136.
+	
+	\bibitem{art-25}
+	Brunk J, Stierle M, Papke L, et al. Cause vs. effect in context-sensitive prediction of business process instances[J]. Information Systems, 2021, 95: 101635.
+	
 	\bibitem{art-26}
 	Käppel M, Jablonski S, Schönig S. Cost-sensitive predictive business process monitoring[C]//European Conference on Advances in Databases and Information Systems. Springer, Cham, 2021: 14-26.
 	
 	\bibitem{art-27}
 	Weinzierl S, Dunzer S, Tenschert J, et al. Predictive business process deviation monitoring[C]//Proceedings of the 29th European Conference on Information Systems (ECIS). 2021.
 	
+	\bibitem{art-28}
+	De Smedt J, De Weerdt J, Mori J, et al. Predictive Process Model Monitoring using Recurrent Neural Networks[J]. arXiv preprint arXiv:2011.02819, 2020.
+	
 	\bibitem{art-29}
 	Jian C, Xiaofu H, Qing Q. Selecting Publishing Points for the Optimal Sharing of Predictive Monitoring Information of a Service Process[C]//2019 IEEE International Conference on Web Services (ICWS). IEEE, 2019: 368-372.
+	
+	\bibitem{art-30}
+	Brunk J, Revoredo K, Stierle M, et al. Prediction of Business Process Instances with Dynamic Bayesian Networks[C]//SIMPDA. 2018: 50-54.
+	
+	\bibitem{art-31}
+	Taymouri F, Rosa M L, Erfani S, et al. Predictive business process monitoring via generative adversarial nets: the case of next event prediction[C]//International Conference on Business Process Management. Springer, Cham, 2020: 237-256.
+	
+	\bibitem{art-32}
+	Sikaroudi A M E, Rahman M H. Predictive process mining by network of classifiers and clusterers: the PEDF model[J]. arXiv preprint arXiv:2011.11136, 2020.
 		
 	\end{thebibliography}
 
