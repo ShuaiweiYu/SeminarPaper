@@ -34,10 +34,34 @@
 		Various of work suggest the use case and the advantage of implementing predictive process monitoring. 
 		%TODO: Consider to merge these two paragraph together.
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	
 	
 		%TODO: PPM需要的数据 event log 等等
 		Since PPM technique is a branch of process mining technique, it also requires event logs as input\cite{art-15}. 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	
 		%motivation
 		As demonstrated in \cite{original}, a significant amount of literature about predictive process monitoring techniques is becoming available in recent years. A large number of articles on this topic led to the necessity to research the current situation of the PPM technique, what efforts are made, and what is the current research gaps in this field.	In this research paper, I want to answer the main research question \textbf{RQ}: "\textit{What is the development and trend of the predictive process monitoring techniques over the research period?}". This question is achieved by a systematic literature review under the guidance given by \cite{guideline}. I selected 32 papers from 263 papers, which were acquired through searching using google scholar with proper keywords. These 32 papers were then categorized, analyzed, and summarized. As a result, I identified several popular algorithms that are being used most frequently, and I also noticed some new uprising algorithmic trends nowadays. Furthermore, I also detected some potential research gaps in the current predictive process monitoring field. 
@@ -106,34 +130,28 @@
 		\subsection{Next Activities Predictions}
 		The first prediction type I discovered is the next activities prediction.....
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		\subsection{Categorical Predictions}
 		The second prediction type is the categorical prediction. The predictions about the categorical outcome and risk monitoring are made. \cite{art-9} claims that the outcome prediction represents a run-time process most intuitively. The outcome prediction can be summarized as problems of classification given input in the early stage; The example for this prediction type can be very intuitive, e.g., in the service branch, whether the customer is satisfied with the solution or the service provided; In the business area, this technique can be used to predict whether a purchase order will be successfully closed or will be withdrawn, or the ordered products will be delivered on time\cite{art-12}.
-		
+	
 		Several families of algorithms are used in the prediction family. A new technique that emerged in recent years also draws my attention -- Explainable AI (XAI). Several papers about the XAI are used in the categorical predictions to find the explanations for the classification predictions made by the models and try to enhance people's trust in the PPM techniques. 
 		
-		\cite{art-4} and \cite{art-26} leverage the traditional machine learning methods to develop the prediction model. However, the specific algorithm being used is different. The authors of \cite{art-4} argue that Bayesian Networks (BN) are under-explored and come up with two approaches based on Bayesian Networks to handle the uncertainty in PPM. The first approach utilizes parameter learning in BN, which is suitable when facing the lack of the event logs or the business process is complex; In the second approach, parameters and the BN's structure are directly learned by the event log. \cite{art-26} applied cost-sensitive learning (CSL) to address the problem of predicting non-frequent trace variants. The concept of CSL is to assign misclassification cost to each class, and the ML model tries to minimize the total misclassification cost. CSL can capture rare activities of particular importance to increase prediction accuracy. \cite{art-8}  
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		  
+		\cite{art-4} and \cite{art-26} leverage the traditional machine learning methods to develop the prediction model. However, the specific algorithm being used is different. The authors of \cite{art-4} argue that Bayesian Networks (BN) are under-explored and come up with two approaches based on Bayesian Networks to handle the uncertainty in PPM. The first approach utilizes parameter learning in BN, which is suitable when facing the lack of the event logs or the business process is complex; In the second approach, parameters and the BN's structure are directly learned by the event log. \cite{art-26} applied cost-sensitive learning (CSL) to address the problem of predicting non-frequent trace variants. The concept of CSL is to assign misclassification cost to each class, and the ML model tries to minimize the total misclassification cost. CSL can capture rare activities of particular importance to increase prediction accuracy. \cite{art-8} focuses on exploiting the latent factors in the event logs, for example, policies, laws, biases, etc. \cite{art-9}, and \cite{art-12} here leverage the neural network technique again to make the prediction. On the one hand, \cite{art-9} combined the LSTMs model with the attention mechanism and proposed a new effective model called  Att-Bi-LSTM by introducing the idea of natural language process. On the other hand, \cite{art-12} is inspired by the achievement in computer vision, and the authors introduce the concept in computer vision into process mining by associating similar trace values with neighbor pixel frames. \cite{art-9} address the issues of traditional models such as random forest, i.e., the models require to select tailor-made operations manually offline. As a result, different selections lead to different performances. The authors combined the attention mechanism with a BiLSTM network composed of forward LSTM and backward LSTM to build their own model. The advantage of such a model is its efficiency, and the model also has a better performance. \cite{art-12} suggests that computer vision technology can also be applied to the predictive process monitoring sector. The prefix traces are first mapped onto a vector, which will then be encoded and transformed into a 2D image representing the trace. Based on such images, a CNN architecture is finally trained. The outcome seems to be promising. 
 		
 		\subsection{Numeric Predictions}
 		The work focuses on numeric predictions is another crucial area. However, the research papers published during the search period focus majorly on time prediction. Thus in this section, we will be concentrating only on the remaining time prediction. As demonstrated in \cite{art-13}, The prediction of the remaining time can be beneficial in areas where the scheduling and choice determination are involved. \cite{art-15} also addresses the significance of the remaining time prediction by mentioning its usage to avoid undesirable situations during the running business process. \cite{art-29} suggest that the remaining time should be communicated between business partners to provide the customer with better service. 
