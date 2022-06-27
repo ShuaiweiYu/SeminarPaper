@@ -25,43 +25,21 @@
 	
 	%the first part: Introduction into the topic
 	\section{Introduction}
-		Predictive Process Monitoring (PPM) or Predictive Business Process Monitoring (PBPM) is known as a specific branch of process mining. Process mining focuses on the optimization of business processes using the analysis of deviation detection and the process model discovered by analyzing the historical event logs\cite{art-8}. In contrast, predictive monitoring makes predictions about the development of uncompleted business instances at runtime with given input data\cite{original}. For example, whether the customer will accept the offer, what is the next activity that will occur in a business process, or how much time it would take for the entire business pipeline to finish. 
+		Predictive Process Monitoring (PPM) or Predictive Business Process Monitoring (PBPM) is known as a specific branch of process mining. Process mining focuses on the optimization of business processes using the analysis of deviation detection and the process model discovered by analyzing the historical event logs \cite{art-8}. In contrast, predictive monitoring makes predictions about the development of uncompleted business instances at runtime with given input data \cite{original}. For example, whether the customer will accept the offer, what is the next activity that will occur in a business process, or how much time it would take for the entire business pipeline to finish. 
 	
 		%benefits of PPM
-		Implementing the PPM technique into the business logic of a firm can be very beneficial. With the support of the continuous prediction of future events, the company can provide the customer with better service quality and thus increase their competence. Predictive process monitoring is quite essential for Customer Relationship Management (CRM) by providing the prediction of the possibility of whether a customer's order will be completed on time. PPM is also an effective tool for Enterprise Resource Planning (ERP), e.g., By providing the prediction of the resources required in the next activity, the company can optimize the resource usage\cite{art-13}. The article \cite{art-29} shows us that the prediction of the remaining time is also crucial. It is necessary to communicate the prediction of the remaining time until the process completion and to provide the related partners or customers with progress information.   
+		Implementing the PPM technique into the business logic of a firm can be very beneficial. With the support of the continuous prediction of future events, the company can provide the customer with better service quality and thus increase their competence. Predictive process monitoring is quite essential for Customer Relationship Management (CRM) by providing the prediction of the possibility of whether a customer's order will be completed on time. PPM is also an effective tool for Enterprise Resource Planning (ERP), e.g., By providing the prediction of the resources required in the next activity, the company can optimize the resource usage \cite{art-13}. The article \cite{art-29} shows us that the prediction of the remaining time is also crucial. It is necessary to communicate the prediction of the remaining time until the process completion and to provide the related partners or customers with progress information.   
 		
-		%TODO: PPM好处举例子
-		Various of work suggest the use case and the advantage of implementing predictive process monitoring. 
-		%TODO: Consider to merge these two paragraph together.
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		%some examples of advantage of PPM
+		Various works already suggest the use case and the advantage of implementing predictive process monitoring. The work of \cite{art-6}, and \cite{art-7} both suggest the significant meaning of the PPM providing information on predicted failures and deviations. The work \cite{art-13} and \cite{art-24} shows how PPM can provide the managers with insights into system development and offer necessary information for CRM or ERP systems. \cite{art-5} illustrate how the analysts can intervene proactively in a business process with the prediction information.
 	
-	
-		%TODO: PPM需要的数据 event log 等等
-		Since PPM technique is a branch of process mining technique, it also requires event logs as input\cite{art-15}. 
+		%Meaning of the event logs
+		Since the PPM technique is a branch of the process mining technique, it also requires event logs as input \cite{art-15}. Nowadays, different types of information systems are already widely adopted by firms to manage the workflows, plan the resource allocation and manage the customer relationship. Such information systems usually produce many event logs, which provide the basic data for predictive process monitoring \cite{art-5}. The graph below demonstrates a simple example of an event log fragment. As we can see, an event log is understood as a collection of a series of \textit{traces} (they are also sometimes referred to as \textit{cases}). A trace consists of one or several events, which have a unique id to differ one from another. The ID sometimes is denoted as $ e_{n} $ with $ n \in$ |event ID|. An event is a minimum element of an event log, and it represents a single execution of an activity. An event can have several attributes; in our case, for example, the timestamp. 
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		\begin{figure}
+		\includegraphics[scale=0.4]{event_logs.png}
+		\centering		\caption{A simple fragment of an event log} 
+		\end{figure}
 	
 		%motivation
 		As demonstrated in \cite{original}, a significant amount of literature about predictive process monitoring techniques is becoming available in recent years. A large number of articles on this topic led to the necessity to research the current situation of the PPM technique, what efforts are made, and what is the current research gaps in this field.	In this research paper, I want to answer the main research question \textbf{RQ}: "\textit{What is the development and trend of the predictive process monitoring techniques over the research period?}". This question is achieved by a systematic literature review under the guidance given by \cite{guideline}. I selected 32 papers from 263 papers, which were acquired through searching using google scholar with proper keywords. These 32 papers were then categorized, analyzed, and summarized. As a result, I identified several popular algorithms that are being used most frequently, and I also noticed some new uprising algorithmic trends nowadays. Furthermore, I also detected some potential research gaps in the current predictive process monitoring field. 
@@ -80,33 +58,32 @@
 		In the first research question, I want to visualize the distribution of the article published in order to analyze the current trend of predictive process monitoring. With this visualization, people are able to take a deeper look into the development of interest in the industry of predictive process monitoring. The second research question examines the distribution of algorithms used for predictive process monitoring. The motivation for this is that I want to reveal which algorithms are more popular and widely used. With the first two research questions, current research trend of predictive process monitoring can be derived. I can also analyze the possible research gaps where further academic contributions could be made. In \cite{original}, several aspects were already listed. However, the third research questions want to research whether there are new predictive aspects developed or how the new predictive process monitoring model predicts these aspects differently. The last research question tries to look into the reason that led to the current development of predictive process monitoring so that I might predict what the research direction of this field might be.
 		
 		%development of search string
-		To develop the search string, I followed the guidelines and suggestions given by \cite{guideline} and based on the work of \cite{original}, The first search string I use is: ("predictive" OR "prediction") + ("business process" OR "process mining"). Furthermore, in order to explore as many results as possible, I also decided another search string: ("predictive" OR "prediction") + "process monitoring". 
-		
-		%electronic database
-		After defining the search string, I could choose electronic databases for searching. I decided to use Google Scholar as electronic databases to be used, for its completeness and simple operability. The search period was between year 2018 and 2022.
+		To develop the search string, I followed the guidelines and suggestions given by \cite{guideline} and, based on the work of \cite{original}, developed the search string I'm going to use. After defining the search string, I decided to use Google Scholar as the electronic database for its completeness and simple operability. The search period was between the years 2018 and 2022.
 		
 		%steps of filtering below
-		The first step of the filtering is about identifying the duplicates. Since several Databases are used, and the keywords can potentially overlap, our goal is to identify the literature that appeared more than once and whose name and author are identical. Only one of the papers will be preserved for future processes. In the next step, I look into the title of the papers gathered. In this step, (i) the studies that are related to a different field will be removed (e.g., "A Chemical Monitoring and Prediction System in Semiconductor Manufacturing Process Using Bigdata and AI Techniques", or "Condition monitoring and prediction of solution quality during a copper electroplating process"); (ii) the documents which are not proper research papers should also be removed (e.g., "Integration of an Explainable Predictive Process Monitoring System into IBM Process Mining Suite (Extended Abstract)").
+		The first step of the filtering is about identifying the duplicates. My goal is to identify the literature that appeared more than once and whose name and author are identical. Only one of the papers will be preserved for future processes. In the next step, I look into the title of the papers gathered. In this step, (i) the studies that are related to a different field will be removed (e.g., "A Chemical Monitoring and Prediction System in Semiconductor Manufacturing Process Using Bigdata and AI Techniques", or "Condition monitoring and prediction of solution quality during a copper electroplating process"); (ii) the documents which are not proper research papers should also be removed (e.g., "Integration of an Explainable Predictive Process Monitoring System into IBM Process Mining Suite (Extended Abstract)").
 				
 		%The last steps of filtering
 		Moreover, I only consider the papers published in conferences, journals, and workshops, because, in comparison to degree thesis, published articles are more professional and have a higher academic contribution. In the next step of filtering, I looked into the abstract of each paper in order to evaluate its relevance. I also leave out the position paper at this stage since I only intended to look into the algorithms being used. In the last stage, I use the inclusion criterion \textit{"the study should propose a novel algorithm or technique for predictive process monitoring"} to further select the papers used for our study.
 		
 		%clarification of the table
-		The following table summarizes a specific list of my literature search. Out of 263 hits, I performed the filtering as listed above-mentioned, and according to selection criteria, I selected 28 papers. 4 more articles were added via vertical search. \footnote{The queries were run on 18th May 2022}
-
-		\begin{figure}
-		\includegraphics[width=\textwidth]{Filtering.png}
-		\caption{Overview of Systematic Literature Review Protocol} 
-		\end{figure}
+		The Figure 2 below \ref{Filtering} summarizes a specific list of my literature search. Out of 263 hits, I performed the filtering as listed above-mentioned, and according to selection criteria, I selected 28 papers. 4 more articles were added via vertical search. \footnote{The queries were run on 18th May 2022}
 		
 		%extraction of information of the data 
 		From the final 32 papers, I extracted the meta-Information. Information about the publication date was extracted to answer \textbf{RQ1}. Every article usually comes up with an algorithm that predicts some or several aspects of the business process. Thus, I categorize each paper with its prediction level and algorithms so that the \textbf{RQ2} and \textbf{RQ3} can be answered. By analyzing the data and looking into each paper, \textbf{RQ4} in the end can be addressed.\footnote{The selected documents were visualized as an excel sheet and is available at \url{https://tumde-my.sharepoint.com/:x:/g/personal/shuaiwei_yu_tum_de/Ef8ufzITCHpNi32om-3FQUQBZvOeGkWU9LLN_ZlcvawoRQ?e=cc8cnW} }
 		
-	
+		\begin{figure}
+		\includegraphics[width=\textwidth]{Filtering.png}
+		\caption{Overview of Systematic Literature Review Protocol} 
+		\label{Filtering}
+		\end{figure}
+		
+		
+		
 	\section{Systematic Literature Review Results}
 		
 		%publication distribution
-		To answer \textbf{RQ1}, I analyzed the publication date from the extracted meta-data by plotting the publication number. More and more publications on predictive process monitoring can be observed. Such a trend would imply that the PPM is gaining more and more attention, and the topic is becoming hotter. There is only one publication from 2022, probably because the queries were performed in May, and some papers are not yet published. Several conferences about Information Systems are not yet held, e.g., \textit{International Conference on Process Mining (ICPM)} will take place in October 2022. 
+		To answer \textbf{RQ1}, I analyzed the publication date from the extracted meta-data by plotting the publication number. More and more publications on predictive process monitoring can be observed. Such a trend would imply that the PPM is gaining more and more attention, and the topic is becoming hotter. There is only one publication from 2022, probably because the queries were performed in May, and some papers are not yet published. Several conferences about Information Systems are not yet held, e.g., \textit{International Conference on Process Mining (ICPM)} will take place in October 2022. \footnote{\url{https://icpmconference.org/2022/}} 
 		
 	
 		\begin{figure}
@@ -147,7 +124,7 @@
 		
 		
 		\subsection{Categorical Predictions}
-		The second prediction type is the categorical prediction. The predictions about the categorical outcome and risk monitoring are made. \cite{art-9} claims that the outcome prediction represents a run-time process most intuitively. The outcome prediction can be summarized as problems of classification given input in the early stage; The example for this prediction type can be very intuitive, e.g., in the service branch, whether the customer is satisfied with the solution or the service provided; In the business area, this technique can be used to predict whether a purchase order will be successfully closed or will be withdrawn, or the ordered products will be delivered on time\cite{art-12}.
+		The second prediction type is the categorical prediction. The predictions about the categorical outcome and risk monitoring are made. \cite{art-9} claims that the outcome prediction represents a run-time process most intuitively. The outcome prediction can be summarized as problems of classification given input in the early stage; The example for this prediction type can be very intuitive, e.g., in the service branch, whether the customer is satisfied with the solution or the service provided; In the business area, this technique can be used to predict whether a purchase order will be successfully closed or will be withdrawn, or the ordered products will be delivered on time \cite{art-12}.
 	
 		Several families of algorithms are used in the prediction family. A new technique that emerged in recent years also draws my attention -- Explainable AI (XAI). Several papers about the XAI are used in the categorical predictions to find the explanations for the classification predictions made by the models and try to enhance people's trust in the PPM techniques. 
 		
@@ -158,7 +135,7 @@
 		
 		The works in this area all rely on specific models. It is clear that different methods are used to make the prediction, but among them, neural networks are the most commonly used method. \cite{art-29} points out that the prediction of remaining execution time belongs to regression problems and \cite{art-17} illustrated that the Long Short-Term Memory networks (LSTMs) commonly perform better than other models. Due to these facts, it is not hard to imagine why neural networks are the most commonly used ones.
 		
-		In\cite{art-15}\cite{art-21}\cite{art-29}, neural networks are leveraged to make a precise prediction. In \cite{art-15}, the authors employed Deep Neural Network (DNN) and Entity Embedding technique to raise the predictive accuracy. Entity Embedding is important in this context to raise the speed of the neural network; this encoding method clusters the intrinsically similar values that will be denoted as vectors and placed near each other to reduce memory usage.  \cite{art-21} uses LSTM neural network to implement the prediction model. \cite{art-21} suggests that LSTM overcomes the drawback of Recurrent Neural Networks (RNN), which is good at short-term sequential prediction but fails to manage long-term predictions. LSTM networks solve the problem by maintaining some aspects constant of the information flow within the neural cells. \cite{art-29} also leverages the LSTM model to perform the prediction. However, the article also proposes the goal of optimization of selecting publishing points. \cite{art-17} attempts to explain the prediction models with Explainable AI based on the game theory of Shapley Values. The Shapley value of a variable refers to the contribution of this variable to the prediction. In \cite{art-13}, the authors propose to record the spatial event log at the event log that is used as input data to increase accuracy.       
+		In\cite{art-15} \cite{art-21} \cite{art-29}, neural networks are leveraged to make a precise prediction. In \cite{art-15}, the authors employed Deep Neural Network (DNN) and Entity Embedding technique to raise the predictive accuracy. Entity Embedding is important in this context to raise the speed of the neural network; this encoding method clusters the intrinsically similar values that will be denoted as vectors and placed near each other to reduce memory usage. \cite{art-21} uses LSTM neural network to implement the prediction model. \cite{art-21} suggests that LSTM overcomes the drawback of Recurrent Neural Networks (RNN), which is good at short-term sequential prediction but fails to manage long-term predictions. LSTM networks solve the problem by maintaining some aspects constant of the information flow within the neural cells. \cite{art-29} also leverages the LSTM model to perform the prediction. However, the article also proposes the goal of optimization of selecting publishing points. \cite{art-17} attempts to explain the prediction models with Explainable AI based on the game theory of Shapley Values. The Shapley value of a variable refers to the contribution of this variable to the prediction. In \cite{art-13}, the authors propose to record the spatial event log at the event log that is used as input data to increase accuracy.       
 
 				
 		%TODO: rewrite the title
