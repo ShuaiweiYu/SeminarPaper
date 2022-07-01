@@ -87,7 +87,7 @@
 		
 	
 		\begin{figure}
-		\includegraphics[scale=0.4]{Distribution_publications.png}
+		\includegraphics[scale=0.35]{Distribution_publications.png}
 		\centering
 		\caption{The Distribution of publications between the years 2018 and 2022}
 		\end{figure}
@@ -97,7 +97,7 @@
 		
 		
 		\begin{figure}
-		\includegraphics[scale=0.5]{proportion_prediction.png}
+		\includegraphics[scale=0.4]{proportion_prediction.png}
 		\centering
 		\caption{The proportion of the prediction types}
 		\end{figure}
@@ -107,25 +107,7 @@
 		\subsection{Next Activities Predictions}
 		The first prediction type I discovered is the next activities prediction. It predicts the next outcome or the sequence of future activities based on the already occurred events\cite{original}. As we observed from the graph above, most of the predictive process monitoring techniques make the next activities prediction. In \cite{art-5} and \cite{art-24}, the authors argue that the next activities prediction is a fundamental problem because analysts can act proactively with the prediction information to prevent undesired behaviors and guarantee higher utilization. \cite{art-18} also suggests that the prediction information can be used as the prerequisite of subsequent checks. The reason why people are so interested in the next activities prediction is worth discussing. \cite{art-7} already issued the concern of undesired deviations. Such deviations from workflow routines or deadline violations are problematic because they will cause irreparable costs and time waste in firms. Therefore, it is indispensable to identify and notify about deviations before they occur so that preventive measures can be undertaken. 
 		
-		The research in recent years proposed fascinating new insights and advanced novel algorithms to develop the next activities prediction model. \cite{art-5} \cite{art-7} \cite{art-14} \cite{art-23} \cite{art-24} \cite{art-28} \cite{art-31} all used neural networks to propose their models. However, they implemented the neural networks differently. \cite{art-5} proposes a model that combines deep learning and multi-view learning. \cite{art-7} leverages the attention mechanism from Natural Language Processing. Using an attention mechanism, instead of the final layer in the neural network constructing the context vector, every hidden state participates, improving prediction accuracy. In \cite{art-14}, the authors exploit the information from the elapsed time between events and thus propose a PBPM model based on time-aware LSTM cells. \cite{art-23} and \cite{art-24} use the convolutional neural networks architecture to address the problem. Machine learning is another popular algorithm family used in this prediction type. \cite{art-1} combined global and local prediction techniques. Global techniques consider historic behavior at once, while local prediction techniques concentrate on some specific subsets of the historic process behavior. \cite{art-25} and \cite{art-30} build Dynamic Bayesian Networks. Bayesian Network is a probabilistic model revealing the relationships of random variables in a complicated model. Dynamic Bayesian Network is a subclass of Bayesian Network. Because the contextual information in predictive process monitoring changes dynamically, implementing Dynamic Bayesian Networks can be beneficial. \cite{art-10} use the Markov chain models
-		
-		The authors of \cite{art-30} believe  
-		
-		
-		\cite{art-21} leverages the Shallow Machine Learning
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		The research in recent years proposed fascinating new insights and advanced novel algorithms to develop the next activities prediction model. \cite{art-5} \cite{art-7} \cite{art-14} \cite{art-23} \cite{art-24} \cite{art-28} \cite{art-31} all used neural networks to propose their models. However, they implemented the neural networks differently. \cite{art-5} proposes a model that combines deep learning and multi-view learning. \cite{art-7} leverages the attention mechanism from Natural Language Processing. Using an attention mechanism, instead of the final layer in the neural network constructing the context vector, every hidden state participates, improving prediction accuracy. In \cite{art-14}, the authors exploit the information from the elapsed time between events and thus propose a PBPM model based on time-aware LSTM cells. \cite{art-23} and \cite{art-24} use the convolutional neural networks architecture to address the problem. Machine learning is another popular algorithm family used in this prediction type. \cite{art-1} combined global and local prediction techniques. Global techniques consider historic behavior at once, while local prediction techniques concentrate on some specific subsets of the historic process behavior. \cite{art-25} and \cite{art-30} build Dynamic Bayesian Networks. Bayesian Network is a probabilistic model revealing the relationships of random variables in a complicated model. Dynamic Bayesian Network is a subclass of Bayesian Network. Because the contextual information in predictive process monitoring changes dynamically, implementing Dynamic Bayesian Networks can be beneficial. \cite{art-10} use the Markov chain models. Depending only on the current state, Markov chain model is a statistical model to evaluate systems concerning the future. The authors of \cite{art-30} believe that the next event prediction is insufficient. Instead, they used machine learning models to develop a KPI system to recommend next best actions.
 		
 		\subsection{Categorical Predictions}
 		The second prediction type is the categorical prediction. The predictions about the categorical outcome and risk monitoring are made. \cite{art-9} claims that the outcome prediction represents a run-time process most intuitively. The outcome prediction can be summarized as problems of classification given input in the early stage; The example for this prediction type can be very intuitive, e.g., in the service branch, whether the customer is satisfied with the solution or the service provided; In the business area, this technique can be used to predict whether a purchase order will be successfully closed or will be withdrawn, or the ordered products will be delivered on time \cite{art-12}.
@@ -147,30 +129,34 @@
 		To address \textbf{RQ3}, we have to look deeper into the algorithms used in each paper. Thus I summarized the family of algorithms used throughout the research period. We can derive from this graph that the Neural Networks are dominantly used. However, the traditional machine learning methods are not yet outdated; they still find usage in recent works. In recent years, the adoption of Explainable AI in predictive process monitoring is also observed, and it could possibly bring new insights into the Process mining area.       
 		
 		\begin{figure}
-		\includegraphics[scale=0.4]{Distribution_algorithms.png}
+		\includegraphics[scale=0.35]{Distribution_algorithms.png}
 		\centering
 		\caption{The Distribution of algorithms between the years 2018 and 2022}
+		\label{algo1}
 		\end{figure}
 		
 		\textbf{RQ3} now leads us to \textbf{RQ4}. It is beneficial for us to search the algorithmic trend of PPM and the reason behind this, by taking a look of this trend, we are also able to identify the new possible research gaps in the current research field. I plotted the following graph by classifying the algorithms used in each prediction type. 
 		
 		\begin{figure}
-		\includegraphics[scale=0.6]{Algorithms_usage.png}
+		\includegraphics[scale=0.4]{Algorithms_usage.png}
 		\centering
 		\caption{Algorithms used in each prediction type}
+		\label{algo2}
 		\end{figure}
 		
-		\subsection{From naïve Bayesian to Bayesian Networks}
-		
-		\subsection{CNN and LSTMs}
-		
-		\subsection{Explainable AI (XAI)}
+		As observed from the figure \ref{algo1} and \ref{algo2}, I want to talk about some most intuitive and representative algorithms from each algorithm family. I will also try to look into the development of the algorithms' usage.
 		
 		%算法的运用有什么新的趋势吗？XAI eg 为什么会有这种新的趋势
 		%接下来研究一下为什么会有这种趋势，做一个新的图，研究可能的gap
 		
 		
 		%可以介绍一下神经网络，解释一下什么是伸进网络，讲讲他的好处（精确），从他的不可解释性引申到XAI
+		
+		\subsection{From naïve Bayesian to Bayesian Networks}
+		
+		\subsection{CNN and LSTMs}
+		
+		\subsection{Explainable AI (XAI)}
 		
 		
 		\section{Conclusion}
