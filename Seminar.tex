@@ -34,7 +34,7 @@
 		Various works already suggest the use case and the advantage of implementing predictive process monitoring. The work of \cite{art-6}, and \cite{art-7} both suggest the significant meaning of the PPM providing information on predicted failures and deviations. The work \cite{art-13} and \cite{art-24} shows how PPM can provide the managers with insights into system development and offer necessary information for CRM or ERP systems. \cite{art-5} illustrate how the analysts can intervene proactively in a business process with the prediction information.
 	
 		%Meaning of the event logs
-		Since the PPM technique is a branch of the process mining technique, it also requires event logs as input \cite{art-15}. Nowadays, different types of information systems are already widely adopted by firms to manage the workflows, plan the resource allocation and manage the customer relationship. Such information systems usually produce many event logs, which provide the basic data for predictive process monitoring \cite{art-5}. The graph below demonstrates a simple example of an event log fragment. As we can see, an event log is understood as a collection of a series of \textit{traces} (they are also sometimes referred to as \textit{cases}). A trace consists of one or several events, which have a unique id to differ one from another. The ID sometimes is denoted as $ e_{n} $ with $ n \in$ |event ID|. An event is a minimum element of an event log, and it represents a single execution of an activity. An event can have several attributes; in our case, for example, the timestamp. 
+		Since the PPM technique is a branch of the process mining technique, it also requires event logs as input \cite{art-15}. Nowadays, different types of information systems are already widely adopted by firms to manage workflows, plan resource allocation and manage the customer relationship. Such information systems usually produce many event logs, which provide the basic data for predictive process monitoring \cite{art-5}. The graph below demonstrates a simple example of an event log fragment. As we can see, an event log is understood as a collection of a series of \textit{traces} (they are also sometimes referred to as \textit{cases}). A trace consists of one or several events, which have a unique id to differ one from another. The ID sometimes is denoted as $ e_{n} $ with $ n \in$ |event ID|. An event is a minimum element of an event log, representing a single execution of an activity. An event can have several attributes; in our case, for example, the timestamp. 
 		
 		\begin{figure}
 		\includegraphics[scale=0.4]{event_logs.png}
@@ -52,7 +52,7 @@
 		The research questions are formulated in the systematic literature review protocol, the search protocol is defined, and the selection criteria are developed. The selection criteria are based on the selection criterion of \cite{original} and are modified following the guideline provided in Kitchenham's article \cite{guideline}. The work consisted of several stages. In the first stage, The review protocol was designed. Specifically, the research questions to be investigated were formulated, and I chose the electronic database that will be used to run the search. The selection criteria, as well as inclusion criteria, were also defined. In the next stage, the horizontal search was run. The documents acquired were then filtered according to selection criteria; in the end, the final list of documents will be generated.
 		
 		%research questions development.
-		The main research question (\textbf{RQ}): "\textit{What is the development and trend of the predictive process monitoring techniques over the research period?}" can be decomposed in four sub-question as follows. The first two sub-questions are so developed in order to research the current trends and algorithmic distribution of the predictive process monitoring. \textbf{RQ1}: "\textit{What is the distribution of the literature about predictive process monitoring over the search period?}" and \textbf{RQ2}: "\textit{What aspects can be predicted by the predictive process monitoring?}". The next sub-question focuses on the aspects of outcome that can be predicted, \textbf{RQ3}:"\textit{What is the distribution of the algorithms used in predictive process monitoring over the search period?}". In the last question, I want to research the reason that leads to the current trend of predictive process monitoring, i.e., \textbf{RQ4}: "What leads to the trend of predictive process monitoring?"
+		The main research question (\textbf{RQ}): "\textit{What is the development and trend of the predictive process monitoring techniques over the research period?}" can be decomposed in four sub-question as follows. The first two sub-questions are so developed in order to research the current trends and algorithmic distribution of the predictive process monitoring. \textbf{RQ1}: "\textit{What is the distribution of the literature about predictive process monitoring over the search period?}" and \textbf{RQ2}: "\textit{What aspects can be predicted by the predictive process monitoring?}". The next sub-question focuses on the aspects of outcome that can be predicted, \textbf{RQ3}:"\textit{What is the distribution of the algorithms used in predictive process monitoring over the search period?}". In the last question, I want to research the reason that leads to the current trend of predictive process monitoring, i.e., \textbf{RQ4}: "\textit{What leads to the trend of predictive process monitoring?}"
 		
 		%motivations of the research questions.
 		In the first research question, I want to visualize the distribution of the article published in order to analyze the current trend of predictive process monitoring. With this visualization, people are able to take a deeper look into the development of interest in the industry of predictive process monitoring. The second research question examines the distribution of algorithms used for predictive process monitoring. The motivation for this is that I want to reveal which algorithms are more popular and widely used. With the first two research questions, current research trend of predictive process monitoring can be derived. I can also analyze the possible research gaps where further academic contributions could be made. In \cite{original}, several aspects were already listed. However, the third research questions want to research whether there are new predictive aspects developed or how the new predictive process monitoring model predicts these aspects differently. The last research question tries to look into the reason that led to the current development of predictive process monitoring so that I might predict what the research direction of this field might be.
@@ -64,10 +64,10 @@
 		The first step of the filtering is about identifying the duplicates. My goal is to identify the literature that appeared more than once and whose name and author are identical. Only one of the papers will be preserved for future processes. In the next step, I look into the title of the papers gathered. In this step, (i) the studies that are related to a different field will be removed (e.g., "A Chemical Monitoring and Prediction System in Semiconductor Manufacturing Process Using Bigdata and AI Techniques", or "Condition monitoring and prediction of solution quality during a copper electroplating process"); (ii) the documents which are not proper research papers should also be removed (e.g., "Integration of an Explainable Predictive Process Monitoring System into IBM Process Mining Suite (Extended Abstract)").
 				
 		%The last steps of filtering
-		Moreover, I only consider the papers published in conferences, journals, and workshops, because, in comparison to degree thesis, published articles are more professional and have a higher academic contribution. In the next step of filtering, I looked into the abstract of each paper in order to evaluate its relevance. I also leave out the position paper at this stage since I only intended to look into the algorithms being used. In the last stage, I use the inclusion criterion \textit{"the study should propose a novel algorithm or technique for predictive process monitoring"} to further select the papers used for our study.
+		Moreover, I only consider the papers published in conferences, journals, and workshops, because, in comparison to degree thesis, published articles are more professional and have a higher academic contribution. In the next step of filtering, I looked into the abstract of each paper in order to evaluate its relevance. In the last stage, I use the inclusion criterion \textit{"the study should propose a novel algorithm or technique for predictive process monitoring"} to further select the papers used for our study.
 		
 		%clarification of the table
-		The Figure 2 below \ref{Filtering} summarizes a specific list of my literature search. Out of 263 hits, I performed the filtering as listed above-mentioned, and according to selection criteria, I selected 28 papers. 4 more articles were added via vertical search. \footnote{The queries were run on 18th May 2022}
+		The Figure \ref{Filtering} below  summarizes a specific list of my literature search. Out of 263 hits, I performed the filtering as listed above-mentioned, and according to selection criteria, I selected 28 papers. 4 more articles were added via vertical search. \footnote{The queries were run on 18th May 2022}
 		
 		%extraction of information of the data 
 		From the final 32 papers, I extracted the meta-Information. Information about the publication date was extracted to answer \textbf{RQ1}. Every article usually comes up with an algorithm that predicts some or several aspects of the business process. Thus, I categorize each paper with its prediction level and algorithms so that the \textbf{RQ2} and \textbf{RQ3} can be answered. By analyzing the data and looking into each paper, \textbf{RQ4} in the end can be addressed.\footnote{The selected documents were visualized as an excel sheet and is available at \url{https://tumde-my.sharepoint.com/:x:/g/personal/shuaiwei_yu_tum_de/Ef8ufzITCHpNi32om-3FQUQBZvOeGkWU9LLN_ZlcvawoRQ?e=cc8cnW} }
@@ -102,13 +102,17 @@
 		\caption{The proportion of the prediction types}
 		\end{figure}
 		
-		People can observe that 58\% of techniques make a next-activity prediction. On the contrary, only 16\% of techniques make numeric predictions; I will look into this phenomenon in the following sub-sections. I will also summarize the benefits each prediction type brings to business logic as well as briefly talk about the algorithms and new trends that emerged in current studies.
+		People can observe that 58\% of techniques make a next-activity prediction. On the contrary, only 16\% of techniques make numeric predictions; I will look into this phenomenon in the following sub-sections. I will also summarize the benefits each prediction type brings to business logic as well as briefly talk about the algorithms' usage and new trends emerged in current studies.
 		
 		\subsection{Next Activities Predictions}
-		The first prediction type I discovered is the next activities prediction.....
+		The first prediction type I discovered is the next activities prediction. It predicts the next outcome or the sequence of future activities based on the already occurred events\cite{original}. As we observed from the graph above, most of the predictive process monitoring techniques make the next activities prediction. In \cite{art-5} and \cite{art-24}, the authors argue that the next activities prediction is a fundamental problem because analysts can act proactively with the prediction information to prevent undesired behaviors and guarantee higher utilization. \cite{art-18} also suggests that the prediction information can be used as the prerequisite of subsequent checks. The reason why people are so interested in the next activities prediction is worth discussing. \cite{art-7} already issued the concern of undesired deviations. Such deviations from workflow routines or deadline violations are problematic because they will cause irreparable costs and time waste in firms. Therefore, it is indispensable to identify and notify about deviations before they occur so that preventive measures can be undertaken. 
+		
+		The research in recent years proposed fascinating new insights and advanced novel algorithms to develop the next activities prediction model. \cite{art-5} \cite{art-7} \cite{art-14} \cite{art-23} \cite{art-24} \cite{art-28} \cite{art-31} all used neural networks to propose their models. However, they implemented the neural networks differently. \cite{art-5} proposes a model that combines deep learning and multi-view learning. \cite{art-7} leverages the attention mechanism from Natural Language Processing. Using an attention mechanism, instead of the final layer in the neural network constructing the context vector, every hidden state participates, improving prediction accuracy. In \cite{art-14}, the authors exploit the information from the elapsed time between events and thus propose a PBPM model based on time-aware LSTM cells. \cite{art-23} and \cite{art-24} use the convolutional neural networks architecture to address the problem. Machine learning is another popular algorithm family used in this prediction type. \cite{art-1} combined global and local prediction techniques. Global techniques consider historic behavior at once, while local prediction techniques concentrate on some specific subsets of the historic process behavior. \cite{art-25} and \cite{art-30} build Dynamic Bayesian Networks. Bayesian Network is a probabilistic model revealing the relationships of random variables in a complicated model. Dynamic Bayesian Network is a subclass of Bayesian Network. Because the contextual information in predictive process monitoring changes dynamically, implementing Dynamic Bayesian Networks can be beneficial. \cite{art-10} use the Markov chain models
+		
+		The authors of \cite{art-30} believe  
 		
 		
-		
+		\cite{art-21} leverages the Shallow Machine Learning
 		
 		
 		
@@ -137,10 +141,8 @@
 		
 		In\cite{art-15} \cite{art-21} \cite{art-29}, neural networks are leveraged to make a precise prediction. In \cite{art-15}, the authors employed Deep Neural Network (DNN) and Entity Embedding technique to raise the predictive accuracy. Entity Embedding is important in this context to raise the speed of the neural network; this encoding method clusters the intrinsically similar values that will be denoted as vectors and placed near each other to reduce memory usage. \cite{art-21} uses LSTM neural network to implement the prediction model. \cite{art-21} suggests that LSTM overcomes the drawback of Recurrent Neural Networks (RNN), which is good at short-term sequential prediction but fails to manage long-term predictions. LSTM networks solve the problem by maintaining some aspects constant of the information flow within the neural cells. \cite{art-29} also leverages the LSTM model to perform the prediction. However, the article also proposes the goal of optimization of selecting publishing points. \cite{art-17} attempts to explain the prediction models with Explainable AI based on the game theory of Shapley Values. The Shapley value of a variable refers to the contribution of this variable to the prediction. In \cite{art-13}, the authors propose to record the spatial event log at the event log that is used as input data to increase accuracy.       
 
-				
-		%TODO: rewrite the title
 		
-		\section{Research On The Algorithmic Trend}
+		\section{Research on the Algorithmic Trend}
 		
 		To address \textbf{RQ3}, we have to look deeper into the algorithms used in each paper. Thus I summarized the family of algorithms used throughout the research period. We can derive from this graph that the Neural Networks are dominantly used. However, the traditional machine learning methods are not yet outdated; they still find usage in recent works. In recent years, the adoption of Explainable AI in predictive process monitoring is also observed, and it could possibly bring new insights into the Process mining area.       
 		
@@ -158,6 +160,12 @@
 		\caption{Algorithms used in each prediction type}
 		\end{figure}
 		
+		\subsection{From naïve Bayesian to Bayesian Networks}
+		
+		\subsection{CNN and LSTMs}
+		
+		\subsection{Explainable AI (XAI)}
+		
 		%算法的运用有什么新的趋势吗？XAI eg 为什么会有这种新的趋势
 		%接下来研究一下为什么会有这种趋势，做一个新的图，研究可能的gap
 		
@@ -174,7 +182,6 @@
 	\newpage
 	\begin{thebibliography}{99}
 	
-	%TODO: 引用的格式？？？
 	\bibitem{original}
 	Di Francescomarino C, Ghidini C, Maggi F M, et al. Predictive process monitoring methods: Which one suits me best?[C]//International conference on business process management. Springer, Cham, 2018: 462-479.
 	
