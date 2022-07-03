@@ -9,8 +9,8 @@
 \usepackage[utf8]{inputenc}
 
 \begin{document}
-	\title{Seminar- scientific methods in information systems}
-	\subtitle{Predictive Process Monitoring Methods:\\ Which One Suits Me Best?}
+	\title{A Brief Study on the Development of Predictive Process Monitoring}
+	\subtitle{Seminar(IN0014) - scientific methods \\ in information systems}
 	\author{Shuaiwei YU \inst{1} }
 	\institute{Technical University of Munich\\
 	\email{shuaiwei.yu@tum.de}}
@@ -144,26 +144,28 @@
 		\label{algo2}
 		\end{figure}
 		
-		As observed from the figure \ref{algo1} and \ref{algo2}, I want to talk about some most intuitive and representative algorithms from each algorithm family. I will also try to look into the development of the algorithms' usage.
+		As observed from the figure \ref{algo1} and \ref{algo2}, I want to talk about some most intuitive and representative algorithms from recent studies. I will also try to look into the development of the algorithms' usage.
 		
-		%算法的运用有什么新的趋势吗？XAI eg 为什么会有这种新的趋势
-		%接下来研究一下为什么会有这种趋势，做一个新的图，研究可能的gap
+		\subsection{From naïve Bayes to Bayesian Networks}
+		\cite{art-6} states that the prediction of discrete target values can be considered classification problems. For instance, the outcome prediction of customer service can be classified as a binary result, either satisfied (true) or dissatisfied (false). Bayesian models drew my attention among all algorithms for classification problems in predictive process monitoring. Naïve Bayes Classifier is the most intuitive and straightforward model of the Bayesian model family. As given in \cite{slide-1} Naive Bayes classifier considers all attributes and assumes all attributes are equally important and independent. People can easily calculate the probability of a Random Variable. However, as in \cite{slide-1} addressed, adding redundant attributes is problematic for Naïve Bayes. Bayesian Network (BN) is a more advanced and powerful tool to present the probabilistic relationships of variables \cite{art-4}. BNs have several advantages, such as combining different sources of knowledge, supporting decision analysis, and fast responses. BN model is a Directed Acyclic Graph and is represented by $ G = (V, E)$, where $V$ is nodes in the graph, and it represents the considered random variables, e.g., observable quantities or latent variables. $E$ means the conditional relationships between the random variables. Every node is related to a probability function, and the function computes the node's probability with the values of this node's parent variables \cite{art-4}. Dynamic Bayesian Networks (DBNs) are a subclass of BNs that can model dynamic systems like stochastic processes. The DBN's structure and parameters are usually fixed; thus, it can be considered a network representation of a dynamic system \cite{art-25}.   		
 		
-		
-		%可以介绍一下神经网络，解释一下什么是伸进网络，讲讲他的好处（精确），从他的不可解释性引申到XAI
-		
-		\subsection{From naïve Bayesian to Bayesian Networks}
-		
-		\subsection{CNN and LSTMs}
-		
+		\subsection{RNN and LSTMs}
+		Although the traditional machine learning method is interpretable and robust, their accuracies are usually not as high as neural networks nowadays. Therefore, researchers are paying more and more attention to models based on neural networks. I want to first talk about Recurrent Neural Networks (RNN). The basic structure of RNN is its procession of cyclical connections. Because of this particular structure, the RNN uses a part of the output produced by its predecessor. As a result, RNN performs very well in predicting sequential data \cite{art-21}. However, RNN is not efficient when dealing with long-term dependencies. In order to address this problem, Long Short-Term Memory (LSTM) networks are introduced. LSTM is based on the RNN; LSTM not only uses the output from the predecessor but also maintains long-term memory. This is achieved by maintaining some certain aspects constant during the whole process \cite{art-21}. The authors of \cite{art-9} developed a new model based on LSTM. They argue that although the LSTM network generates classifiers representing the relationship between cases and the outcome, such a relationship is very dynamic in outcome prediction. Therefore, the authors combined the forward LSTM and backward LSTM and used this as a hidden layer to extract features in the event logs. In \cite{art-14}, the researchers built Time-Aware Long Short-term Memory (T-LSTM) Cells based on the fundamental structure of LSTM. The article suggests that the primary LSTM cells assume the elapsed time between events is uniformly distributed. It is, however, rarely the case. The designed T-LSTM cells can consider irregular elapsed times when processing event logs. It is achieved by decomposing the previous cell memory. The RNN and LSTM serve as a starting point and the basis for the further implementation of predictive process monitoring models. I believe they still have much potential to be exploited.     
+	
 		\subsection{Explainable AI (XAI)}
+		Nearly every work on Explainable AI addresses the concern of the black-box nature or state-of-the-art property of the neural network, like the LSTM models mentioned in the above section. User trust is very crucial in the business area \cite{art-17} since the prediction models usually cannot offer a convincing explanation of the generated prediction decision, people would hesitate to adopt the predictive process monitoring technique. Hence, the XAI aims to offer explanations and strengthen people's trust in the prediction model. The techniques for XAI are mostly post hoc interpretation which means after a prediction model is generated, explanations and visualizations are extracted \cite{art-20}. The work of \cite{art-17} showed us the usage of the SHAP implementation, which is based on the game theory of Shapley values. The implemented explanation model delivered us the contribution of each variable. \cite{art-20} leveraged the Local Interpretable Model-Agnostic Explanations (LIME) to explain the model by approximating it using a locally interpretable linear model. The Study of \cite{art-11} brings us even further. The article \cite{art-11} suggests that XAI can also detect the error in prediction models. Such errors are generated in the learning phase, where some data in the training set might be incorrect; thus, a perfect classifier cannot be trained. \cite{art-11} wants to identify why a classifier is mistaken and use the XAI to correct such errors to train a better classifier. The researchers find the most common features that lead the predictor to produce wrong predictions by observing the false-positive and false-negative instances in the confusion matrix. To increase accuracy, they then retrain the classifier with the information abstracted in the last step.        
+				
+		\
+		
+		As concluded above, we identified some trends of predictive process monitoring. Traditional machine learning models still perform very reliable and offer very good explainability. However, more and more attention is paid to algorithms based on neural networks because they usually offer very high accuracy. Furthermore, Explainable AI enhances people's trust in decisions made by neural networks and offers us new insights into predictive process monitoring. I also identified some research gaps in the current field. I believe researchers can pay more attention to numeric predictions because the papers published recently on this topic are still relatively few. I also think that we can bring explainable AI into all three prediction topics to let them illustrate the reason behind the prediction models. It is also possible to apply the traditional machine learning algorithms to numeric prediction for more profound research on this matter.   
 		
 		
 		\section{Conclusion}
-
-
-
-
+		The predictive process monitoring techniques have been growing and are receiving more and more attention in recent years. Such trends allow researchers and entrepreneurs to use these techniques to analyze the business process and dynamically predict the future. However, due to the increasing number of published papers, it is sometimes difficult to identify the current research trends and the potential research gaps. Through a systematic literature review in the field of predictive process monitoring, I looked into the current situation of predictive process monitoring. I discovered some trends as well as uncovered some potential research gaps.
+		
+		In order to achieve a thorough and comprehensive study, the bias and incompleteness of the selection for literature should be guaranteed. To achieve this, I carefully followed the guide on a literature search of \cite{guideline}. I used Google scholar to perform the search, to search as many relevant publications as possible. Furthermore, I also performed a back-ward search to conclude related articles. To increase the creditability of this work, the replication of this work is also guaranteed. However, the results could slightly vary due to the date of search and the algorithms used by databases.
+		
+		In future work, I plan to divide the classification of algorithm family more into details to see whether there are more algorithmic trends and connections between the predictive process monitoring. This systematic literature review can serve as a supplementary for the researchers who want to research in this field and might bring new insights and inspirations.
 		
 	\newpage
 	\begin{thebibliography}{99}
@@ -228,8 +230,8 @@
 	\bibitem{art-18}
 	Rico P, Cuadrado F, Dueñas J C. Online Model Generation for Scalable Predictive Process Monitoring[C]//2021 International Young Engineers Forum (YEF-ECE). IEEE, 2021: 7-12.
 	
-	\bibitem{art-19}
-	Pauwels S, Calders T. Incremental predictive process monitoring: The next activity case[C]//International Conference on Business Process Management. Springer, Cham, 2021: 123-140.
+	%\bibitem{art-19}
+	%Pauwels S, Calders T. Incremental predictive process monitoring: The next activity case[C]//International Conference on Business Process Management. Springer, Cham, 2021: 123-140.
 	
 	\bibitem{art-20}
 	Ouyang C, Sindhgatta R, Moreira C. Explainable AI Enabled Inspection of Business Process Prediction Models[J]. arXiv preprint arXiv:2107.09767, 2021.
@@ -269,6 +271,9 @@
 	
 	\bibitem{art-32}
 	Sikaroudi A M E, Rahman M H. Predictive process mining by network of classifiers and clusterers: the PEDF model[J]. arXiv preprint arXiv:2011.11136, 2020.
+	
+	\bibitem{slide-1}
+	Martin, B. (2021) 'Naïve Bayes and Bayes Networks' [Lecture], IN2028: Business Analytics and Machine Learning. Technical University of Munich. 18 November.
 		
 	\end{thebibliography}
 
